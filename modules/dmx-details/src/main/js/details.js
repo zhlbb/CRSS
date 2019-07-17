@@ -1,7 +1,6 @@
 const state = {
 
   visible: false,     // Detail panel visibility
-  pinned: false,      // Pin toggle state
 
   tab: 'info',        // Selected tab: 'info', 'related', 'meta', 'view'.
                       // Note: form edit takes place in "info" tab, while 'mode' is set to 'form'.
@@ -17,24 +16,15 @@ const actions = {
     // Note: we expect actual boolean values (not truish/falsish).
     // The watcher is supposed to fire only on actual visibility changes (see plugin.js).
     if (typeof visible !== 'boolean') {
-      throw Error(`boolean expexted, got ${typeof visible}`)
+      throw Error(`期望是布尔型, got ${typeof visible}`)
     }
     state.visible = visible
-  },
-
-  setDetailPanelPinned ({rootState}, pinned) {
-    state.pinned = pinned
-    // When unpinning an empty detail panel close it.
-    // Note: no route change is involved.
-    if (!pinned && !rootState.object) {
-      state.visible = false
-    }
   },
 
   selectDetail (_, detail) {
     // console.log('selectDetail', detail)
     if (!['info', 'edit', 'related', 'meta', 'view'].includes(detail)) {
-      throw Error(`"${detail}" is not an expected detail name`)
+      throw Error(`"${detail}" 不是期望的详细名称。`)
     }
     if (detail === 'info') {
       state.tab = 'info'
