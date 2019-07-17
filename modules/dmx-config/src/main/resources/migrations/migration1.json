@@ -4,7 +4,7 @@
 {
   "assoc_types": [
     {
-      "value":       "Configuration",
+      "value":       "配置",
       "uri":         "dmx.config.configuration",
       "dataTypeUri": "dmx.core.text",
       "viewConfigTopics": [
@@ -21,7 +21,7 @@
   "topics": [
     // Role Types
     {
-      "value":   "Configurable",
+      "value":   "可配置的",
       "uri":     "dmx.config.configurable",
       "typeUri": "dmx.core.role_type"
     }
