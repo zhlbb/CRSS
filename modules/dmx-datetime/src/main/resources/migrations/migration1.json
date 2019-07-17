@@ -2,22 +2,22 @@
     "topic_types": [
         // Date
         {
-            "value":       "Month",
+            "value":       "月",
             "uri":         "dmx.datetime.month",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Day",
+            "value":       "日",
             "uri":         "dmx.datetime.day",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Year",
+            "value":       "年",
             "uri":         "dmx.datetime.year",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Date",
+            "value":       "日期",
             "uri":         "dmx.datetime.date",
             "dataTypeUri": "dmx.core.value",
             "compDefs": [
@@ -40,17 +40,17 @@
         },
         // Time
         {
-            "value":       "Hour",
+            "value":       "小时",
             "uri":         "dmx.datetime.hour",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Minute",
+            "value":       "分钟",
             "uri":         "dmx.datetime.minute",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Time",
+            "value":       "时间",
             "uri":         "dmx.datetime.time",
             "dataTypeUri": "dmx.core.value",
             "compDefs": [
@@ -68,7 +68,7 @@
         },
         // Date/Time
         {
-            "value":       "Date/Time",
+            "value":       "日期/时间",
             "uri":         "dmx.datetime",
             "dataTypeUri": "dmx.core.value",
             "compDefs": [
@@ -87,12 +87,12 @@
     ],
     "assoc_types": [
         {
-            "value":       "From",
+            "value":       "从",
             "uri":         "dmx.datetime.from",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "To",
+            "value":       "到",
             "uri":         "dmx.datetime.to",
             "dataTypeUri": "dmx.core.text"
         }
