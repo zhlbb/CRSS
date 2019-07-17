@@ -3,19 +3,19 @@
 
 {
   "topic_types": [
-    // User Account
+    // 用户账号
     {
-      "value":       "Username",
+      "value":       "用户名",
       "uri":         "dmx.accesscontrol.username",
       "dataTypeUri": "dmx.core.text"
     },
     {
-      "value":       "Password",
+      "value":       "密码",
       "uri":         "dmx.accesscontrol.password",
       "dataTypeUri": "dmx.core.text"
     },
     {
-      "value":       "User Account",
+      "value":       "用户账号",
       "uri":         "dmx.accesscontrol.user_account",
       "dataTypeUri": "dmx.core.identity",
       "compDefs": [
@@ -39,14 +39,14 @@
     },
     // Config
     {
-      "value": "Login enabled",
+      "value": "已启用登录",
       "uri": "dmx.accesscontrol.login_enabled",
       "dataTypeUri": "dmx.core.boolean"
     }
   ],
   "assoc_types": [
     {
-      "value":       "Membership",
+      "value":       "成员",
       "uri":         "dmx.accesscontrol.membership",
       "dataTypeUri": "dmx.core.text",
       "viewConfigTopics": [
