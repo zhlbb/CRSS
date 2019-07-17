@@ -5,13 +5,13 @@
     </el-button>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item>
-        <el-link href="https://docs.dmx.systems" target="_blank" :underline="false">Documentation</el-link>
+        <el-link href="https://docs.dmx.systems" target="_blank" :underline="false">使用手册</el-link>
       </el-dropdown-item>
       <el-dropdown-item>
-        <el-link href="https://forum.dmx.systems" target="_blank" :underline="false">Forum</el-link>
+        <el-link href="https://forum.dmx.systems" target="_blank" :underline="false">用户论坛</el-link>
       </el-dropdown-item>
       <el-dropdown-item command="openAboutBox" divided>
-        About DMX
+        关于DMX
       </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
