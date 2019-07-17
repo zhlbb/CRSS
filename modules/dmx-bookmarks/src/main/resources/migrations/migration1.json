@@ -4,12 +4,12 @@
 {
   "topic_types": [
     {
-      "value":       "Bookmark Description",
+      "value":       "书签描述",
       "uri":         "dmx.bookmarks.description",
       "dataTypeUri": "dmx.core.html"
     },
     {
-      "value":       "Bookmark",
+      "value":       "书签",
       "uri":         "dmx.bookmarks.bookmark",
       "dataTypeUri": "dmx.core.identity",
       "compDefs": [
