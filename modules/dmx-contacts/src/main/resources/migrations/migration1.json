@@ -5,24 +5,24 @@
   {
     "topic_types": [
       {
-        "value":       "Phone Label",
+        "value":       "电话标签",
         "uri":         "dmx.contacts.phone_label",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Address Label",
+        "value":       "地址标签",
         "uri":         "dmx.contacts.address_label",
         "dataTypeUri": "dmx.core.text"
       }
     ],
     "assoc_types": [
       {
-        "value":       "Date of Birth",
+        "value":       "出生日期",
         "uri":         "dmx.contacts.date_of_birth",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Phone Entry",
+        "value":       "电话输入",
         "uri":         "dmx.contacts.phone_entry",
         "dataTypeUri": "dmx.core.composite",
         "compDefs": [
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "value":       "Address Entry",
+        "value":       "地址输入",
         "uri":         "dmx.contacts.address_entry",
         "dataTypeUri": "dmx.core.composite",
         "compDefs": [
@@ -69,17 +69,17 @@
     "topic_types": [
       // Person Name
       {
-        "value":       "First Name",
+        "value":       "名",
         "uri":         "dmx.contacts.first_name",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Last Name",
+        "value":       "姓",
         "uri":         "dmx.contacts.last_name",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Person Name",
+        "value":       "人名",
         "uri":         "dmx.contacts.person_name",
         "dataTypeUri": "dmx.core.value",
         "compDefs": [
@@ -97,50 +97,50 @@
       },
       // Organization Name
       {
-        "value":       "Organization Name",
+        "value":       "组织机构名称",
         "uri":         "dmx.contacts.organization_name",
         "dataTypeUri": "dmx.core.text"
       },
       // Phone
       {
-        "value":       "Phone",
+        "value":       "电话",
         "uri":         "dmx.contacts.phone_number",
         "dataTypeUri": "dmx.core.text"
       },
       // Email Address
       {
-        "value":       "Email Address",
+        "value":       "Email地址",
         "uri":         "dmx.contacts.email_address",
         "dataTypeUri": "dmx.core.text"
       },
       // Address
       {
-        "value":       "Street",
+        "value":       "街道",
         "uri":         "dmx.contacts.street",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Postal Code",
+        "value":       "邮编",
         "uri":         "dmx.contacts.postal_code",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "City",
+        "value":       "城市",
         "uri":         "dmx.contacts.city",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Region",
+        "value":       "地区",
         "uri":         "dmx.contacts.region",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Country",
+        "value":       "国家",
         "uri":         "dmx.contacts.country",
         "dataTypeUri": "dmx.core.text"
       },
       {
-        "value":       "Address",
+        "value":       "地址",
         "uri":         "dmx.contacts.address",
         "dataTypeUri": "dmx.core.value",
         "compDefs": [
@@ -173,12 +173,12 @@
       },
       // Person
       {
-        "value":       "Person Description",
+        "value":       "人物描述",
         "uri":         "dmx.contacts.person_description",
         "dataTypeUri": "dmx.core.html"
       },
       {
-        "value":       "Person",
+        "value":       "人物",
         "uri":         "dmx.contacts.person",
         "dataTypeUri": "dmx.core.identity",
         "compDefs": [
@@ -227,12 +227,12 @@
       },
       // Organization
       {
-        "value":       "Organization Description",
+        "value":       "组织机构描述",
         "uri":         "dmx.contacts.organization_description",
         "dataTypeUri": "dmx.core.html"
       },
       {
-        "value":       "Organization",
+        "value":       "组织机构",
         "uri":         "dmx.contacts.organization",
         "dataTypeUri": "dmx.core.identity",
         "compDefs": [
@@ -278,38 +278,38 @@
     "topics": [
       // Phone Labels
       {
-        "value":   "work",
+        "value":   "工作电话",
         "uri":     "dmx.contacts.work_phone",
         "typeUri": "dmx.contacts.phone_label"
       },
       {
-        "value":   "home",
+        "value":   "家庭电话",
         "uri":     "dmx.contacts.home_phone",
         "typeUri": "dmx.contacts.phone_label"
       },
       {
-        "value":   "mobile",
+        "value":   "手机号码",
         "uri":     "dmx.contacts.mobile",
         "typeUri": "dmx.contacts.phone_label"
       },
       {
-        "value":   "work fax",
+        "value":   "工作传真",
         "uri":     "dmx.contacts.work_fax",
         "typeUri": "dmx.contacts.phone_label"
       },
       {
-        "value":   "home fax",
+        "value":   "家庭传真",
         "uri":     "dmx.contacts.home_fax",
         "typeUri": "dmx.contacts.phone_label"
       },
       // Address Labels
       {
-        "value":   "work",
+        "value":   "工作地址",
         "uri":     "dmx.contacts.work_address",
         "typeUri": "dmx.contacts.address_label"
       },
       {
-        "value":   "home",
+        "value":   "家庭地址",
         "uri":     "dmx.contacts.home_address",
         "typeUri": "dmx.contacts.address_label"
       }

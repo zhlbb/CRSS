@@ -4,14 +4,14 @@
 {
   "topic_types": [
     {
-      "value":       "Organizational Role",
+      "value":       "组织角色",
       "uri":         "dmx.contacts.organizational_role",
       "dataTypeUri": "dmx.core.text"
     }
   ],
   "assoc_types": [
     {
-      "value":       "Organization Involvement",
+      "value":       "组织有关人员",
       "uri":         "dmx.contacts.organization_involvement",
       "dataTypeUri": "dmx.core.composite",
       "compDefs": [
@@ -44,35 +44,35 @@
   "topics": [
     // Organizational Roles
     {
-      "value":   "Executive Director",
+      "value":   "执行董事",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Founder",
+      "value":   "创始人",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Chairman",
+      "value":   "主席",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Partner",
+      "value":   "合伙人",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Collaborator",
+      "value":   "合作伙伴",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Employee",
+      "value":   "雇员",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Member",
+      "value":   "成员",
       "typeUri": "dmx.contacts.organizational_role"
     },
     {
-      "value":   "Associate",
+      "value":   "同事",
       "typeUri": "dmx.contacts.organizational_role"
     }
   ]
