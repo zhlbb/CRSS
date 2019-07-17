@@ -1,24 +1,25 @@
 {
     "topic_types": [
         {
-            "value":       "Identity Attribute",
+            "value":       "身份属性",
             "uri":         "dmx.core.identity_attr",
             "dataTypeUri": "dmx.core.boolean"
         },
         {
-            "value":       "Include in Label",
+            "value":       "包含在标签中",
             "uri":         "dmx.core.include_in_label",
             "dataTypeUri": "dmx.core.boolean"
         }
     ],
+
     "assoc_types": [
         {
-            "value":       "Custom Association Type",
+            "value":       "自定义关联类型",
             "uri":         "dmx.core.custom_assoc_type",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "Composition Definition",
+            "value":       "复合型定义",
             "uri":         "dmx.core.composition_def",
             "dataTypeUri": "dmx.core.composite",
             "compDefs": [

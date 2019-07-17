@@ -1,22 +1,22 @@
 {
     "topic_types": [
         {
-            "value":       "Plugin Name",
+            "value":       "插件名称",
             "uri":         "dmx.core.plugin_name",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "Symbolic Name",
+            "value":       "符号名称",
             "uri":         "dmx.core.plugin_symbolic_name",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "Migration Nr.",
+            "value":       "迁移编号",
             "uri":         "dmx.core.plugin_migration_nr",
             "dataTypeUri": "dmx.core.number"
         },
         {
-            "value":       "Plugin",
+            "value":       "插件",
             "uri":         "dmx.core.plugin",
             "dataTypeUri": "dmx.core.identity",
             "compDefs": [

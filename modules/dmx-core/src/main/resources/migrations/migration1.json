@@ -4,17 +4,17 @@
         // and the topic type "Data Type" are created while bootstrap.
         // See CoreServiceImpl.setupBootstrapContent()
         /*{
-            "value":       "Data Type",
+            "value":       "数据类型",
             "uri":         "dmx.core.data_type",
             "dataTypeUri": "dmx.core.text"
         },*/
         {
-            "value":       "Role Type",
+            "value":       "角色类型",
             "uri":         "dmx.core.role_type",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "Cardinality",
+            "value":       "基数",
             "uri":         "dmx.core.cardinality",
             "dataTypeUri": "dmx.core.text"
         }
@@ -25,22 +25,22 @@
         //
         // Note: The association type "Composition Definition" is created in migration 2.
         /*{
-            "value":       "Composition",
+            "value":       "复合型",
             "uri":         "dmx.core.composition",
             "dataTypeUri": "dmx.core.text"
         },*/
         /*{
-            "value":       "Instantiation",
+            "value":       "实例",
             "uri":         "dmx.core.instantiation",
             "dataTypeUri": "dmx.core.text"
         },*/
         {
-            "value":       "Association",
+            "value":       "关联",
             "uri":         "dmx.core.association",
             "dataTypeUri": "dmx.core.text"
         },
         {
-            "value":       "Sequence",
+            "value":       "顺序",
             "uri":         "dmx.core.sequence",
             "dataTypeUri": "dmx.core.text"
         }
@@ -51,99 +51,99 @@
         // Note: The data type "Text" is created while bootstrap.
         // See CoreServiceImpl.setupBootstrapContent()
         /*{
-            "value":   "Text",
+            "value":   "文本型",
             "uri":     "dmx.core.text",
             "typeUri": "dmx.core.data_type"
         },*/
         {
-            "value":   "HTML",
+            "value":   "网页型",
             "uri":     "dmx.core.html",
             "typeUri": "dmx.core.data_type"
         },
         {
-            "value":   "Number",
+            "value":   "数字型",
             "uri":     "dmx.core.number",
             "typeUri": "dmx.core.data_type"
         },
         {
-            "value":   "Boolean",
+            "value":   "布尔型",
             "uri":     "dmx.core.boolean",
             "typeUri": "dmx.core.data_type"
         },
         {
-            "value":   "Composite",
+            "value":   "复合型",
             "uri":     "dmx.core.composite",
             "typeUri": "dmx.core.data_type"
         },
         {
-            "value":   "Value",
+            "value":   "值",
             "uri":     "dmx.core.value",
             "typeUri": "dmx.core.data_type"
         },
         {
-            "value":   "Identity",
+            "value":   "标识符",
             "uri":     "dmx.core.identity",
             "typeUri": "dmx.core.data_type"
         },
         // Role Types
         {
-            "value":   "Default",
+            "value":   "默认",
             "uri":     "dmx.core.default",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Type",
+            "value":   "类型",
             "uri":     "dmx.core.type",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Instance",
+            "value":   "实例",
             "uri":     "dmx.core.instance",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Parent",
+            "value":   "父",
             "uri":     "dmx.core.parent",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Child",
+            "value":   "子",
             "uri":     "dmx.core.child",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Parent Type",
+            "value":   "父类",
             "uri":     "dmx.core.parent_type",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Child Type",
+            "value":   "子类",
             "uri":     "dmx.core.child_type",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Predecessor",
+            "value":   "前任",
             "uri":     "dmx.core.predecessor",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Successor",
+            "value":   "继任者",
             "uri":     "dmx.core.successor",
             "typeUri": "dmx.core.role_type"
         },
         {
-            "value":   "Sequence Start",
+            "value":   "序列开始",
             "uri":     "dmx.core.sequence_start",
             "typeUri": "dmx.core.role_type"
         },
         // Cardinalities
         {
-            "value":   "One",
+            "value":   "一个",
             "uri":     "dmx.core.one",
             "typeUri": "dmx.core.cardinality"
         },
         {
-            "value":   "Many",
+            "value":   "多个",
             "uri":     "dmx.core.many",
             "typeUri": "dmx.core.cardinality"
         }
