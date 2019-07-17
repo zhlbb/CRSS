@@ -1,24 +1,24 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible" width="20em" title="Login" @open="open" @close="close">
+  <el-dialog custom-class="dm5-login-dialog" :visible="visible" width="20em" title="登录窗口" @open="open" @close="close">
     <div class="field" v-if="showSelect">
-      <div class="field-label">Authorization Method</div>
+      <div class="field-label">授权方式</div>
       <el-select v-model="authMethod">
         <el-option v-for="authMethod in authMethods" :value="authMethod" :key="authMethod"></el-option>
       </el-select>
     </div>
     <div class="field">
-      <div class="field-label">Username</div>
+      <div class="field-label">用户名</div>
       <el-input v-model="credentials.username" ref="username" @keyup.native.enter="advance"></el-input>
     </div>
     <div class="field">
-      <div class="field-label">Password</div>
-      <el-input v-model="credentials.password" ref="password" @keyup.native.enter="login" type="password"></el-input>
+      <div class="field-label">密码</div>
+      <el-input v-model="credentials.password" ref="password" @keyup.native.enter="登录" type="password"></el-input>
     </div>
     <div class="field">
       {{message}}
     </div>
     <div slot="footer">
-      <el-button type="primary" @click="login">OK</el-button>
+      <el-button type="primary" @click="login">登录</el-button>
     </div>
   </el-dialog>
 </template>
@@ -68,12 +68,11 @@ export default {
         credentials: this.credentials,
         authMethod:  this.authMethod
       }).then(success => {
-        this.credentials.password = ''
         if (success) {
-          this.message = 'Login OK'
+          this.message = '登录成功'
           this.close()
         } else {
-          this.message = 'Login failed'
+          this.message = '登录失败'
         }
       })
     },
@@ -86,7 +85,7 @@ export default {
 
     close () {
       // FIXME: called twice when closing programmatically (through login())
-      // console.log('close login')
+      // console.log('关闭登录')
       this.$store.dispatch('closeLoginDialog')
     },
 

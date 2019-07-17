@@ -1,6 +1,6 @@
 <template>
   <div class="dm5-user-account-options">
-    <div class="field-label">Password</div>
+    <div class="field-label">密码</div>
     <el-input v-model="password" type="password"></el-input>
   </div>
 </template>

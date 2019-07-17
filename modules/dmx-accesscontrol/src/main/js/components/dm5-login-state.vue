@@ -1,7 +1,7 @@
 <template>
   <div class="login-state">
     <div v-if="username" class="info">
-      Logged in as <span class="username">{{username}}</span>
+       <span class="username">{{username}}成功登录</span>
     </div>
     <el-button type="text" @click="dispatch">{{buttonLabel}}</el-button>
   </div>
@@ -17,7 +17,7 @@ export default {
     },
 
     buttonLabel () {
-      return this.username ? 'Logout' : 'Login'
+      return this.username ? '退出' : '登录'
     },
 
     buttonAction () {
