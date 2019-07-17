@@ -20,17 +20,17 @@ public interface AccessControlService {
     static final String ADMIN_INITIAL_PASSWORD = System.getProperty("dmx.security.initial_admin_password", "");
 
     // Administration workspace
-    static final String ADMINISTRATION_WORKSPACE_NAME = "Administration";
+    static final String ADMINISTRATION_WORKSPACE_NAME = "管理员空间";
     static final String ADMINISTRATION_WORKSPACE_URI = "dmx.workspaces.administration";
     static final SharingMode ADMINISTRATION_WORKSPACE_SHARING_MODE = SharingMode.COLLABORATIVE;
 
     // System workspace
-    static final String SYSTEM_WORKSPACE_NAME = "System";
+    static final String SYSTEM_WORKSPACE_NAME = "系统空间";
     static final String SYSTEM_WORKSPACE_URI = "dmx.workspaces.system";
     static final SharingMode SYSTEM_WORKSPACE_SHARING_MODE = SharingMode.PUBLIC;
 
     // Private workspaces
-    static final String DEFAULT_PRIVATE_WORKSPACE_NAME = "Private Workspace";
+    static final String DEFAULT_PRIVATE_WORKSPACE_NAME = "个人空间";
 
     // -------------------------------------------------------------------------------------------------- Public Methods
 

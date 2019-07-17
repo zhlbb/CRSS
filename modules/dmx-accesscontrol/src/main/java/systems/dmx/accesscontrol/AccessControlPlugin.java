@@ -214,7 +214,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     public Topic getPrivateWorkspace() {
         String username = getUsername();
         if (username == null) {
-            throw new IllegalStateException("No user is logged in");
+            throw new IllegalStateException("没有用户登录");
         }
         return dmx.getPrivilegedAccess().getPrivateWorkspace(username);
     }
@@ -231,7 +231,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         try {
             String username = cred.username;
             PrivilegedAccess pa = dmx.getPrivilegedAccess();
-            logger.info("Creating user account \"" + username + "\"");
+            logger.info("正在创建用户账号 \"" + username + "\"");
             //
             // 1) create username topic and a private workspace
             final Topic usernameTopic = createUsername(username);
@@ -257,14 +257,14 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             //
             return usernameTopic;
         } catch (Exception e) {
-            throw new RuntimeException("Creating user account \"" + cred.username + "\" failed", e);
+            throw new RuntimeException("创建用户账号 \"" + cred.username + "\" 失败。", e);
         }
     }
 
     @Override
     public Topic createUsername(final String username) {
         try {
-            logger.info("Creating username topic \"" + username + "\"");
+            logger.info("创建用户名主题 \"" + username + "\"");
             PrivilegedAccess pa = dmx.getPrivilegedAccess();
             //
             // 1) check username uniqueness
@@ -273,7 +273,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             // listener will not trigger.
             Topic usernameTopic = getUsernameTopic(username);
             if (usernameTopic != null) {
-                throw new RuntimeException("Username \"" + username + "\" exists already");
+                throw new RuntimeException("用户名 \"" + username + "\" 已经存在。");
             }
             // 2) create username topic
             // We suppress standard workspace assignment here as a username topic require special assignment.
@@ -301,7 +301,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             //
             return usernameTopic;
         } catch (Exception e) {
-            throw new RuntimeException("Creating username topic \"" + username + "\" failed", e);
+            throw new RuntimeException("创建用户名主题 \"" + username + "\" 失败。", e);
         }
     }
 
@@ -330,7 +330,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         try {
             workspace.setProperty(PROP_OWNER, username, true);  // addToIndex=true
         } catch (Exception e) {
-            throw new RuntimeException("Setting the workspace owner of " + info(workspace) + " failed (username=" +
+            throw new RuntimeException("设置工作空间 " + info(workspace) + " 的所有者失败。 (username=" +
                 username + ")", e);
         }
     }
@@ -443,15 +443,15 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     @Override
     public void registerAuthorizationMethod(String name, AuthorizationMethod am) {
         if (authorizationMethods.containsKey(name)) {
-            throw new RuntimeException("Authorization method \"" + name + "\" already registered");
+            throw new RuntimeException("授权方法 \"" + name + "\" 已经注册。");
         }
-        logger.info("Registering authorization method \"" + name + "\"");
+        logger.info("正在注册授权方式 \"" + name + "\"");
         authorizationMethods.put(name, am);
     }
 
     @Override
     public void unregisterAuthorizationMethod(String name) {
-        logger.info("Unregistering authorization method \"" + name + "\"");
+        logger.info("正在注销授权方法 \"" + name + "\"");
         authorizationMethods.remove(name);
     }
 
@@ -481,7 +481,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         if (configService != null) {
             configService.unregisterConfigDefinition(LOGIN_ENABLED_TYPE);
         } else {
-            logger.warning("Config service is already gone");
+            logger.warning("配置服务已不存在。");
         }
     }
 
@@ -496,7 +496,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     @Override
     public TopicModel getConfigValue(Topic topic) {
         if (!topic.getTypeUri().equals("dmx.accesscontrol.username")) {
-            throw new RuntimeException("Unexpected configurable topic: " + topic);
+            throw new RuntimeException("意外的可配置主题: " + topic);
         }
         // the "admin" account must be enabled regardless of the "dmx.security.new_accounts_are_enabled" setting
         if (topic.getSimpleValue().toString().equals(ADMIN_USERNAME)) {
@@ -563,7 +563,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             SimpleValue newUsername = updateModel.getSimpleValue();
             String oldUsername = topic.getSimpleValue().toString();
             if (newUsername != null && !newUsername.toString().equals(oldUsername)) {
-                throw new RuntimeException("A Username can't be changed (tried \"" + oldUsername + "\" -> \"" +
+                throw new RuntimeException("无法更改用户名 (tried \"" + oldUsername + "\" -> \"" +
                     newUsername + "\")");
             }
         }
@@ -609,7 +609,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         long occupiedSpace = getOccupiedSpace(username);
         boolean quotaOK = occupiedSpace + fileSize <= diskQuota;
         //
-        logger.info("### File size: " + fileSize + " bytes, " + userInfo(username) + " occupies " + occupiedSpace +
+        logger.info("### 文件大小: " + fileSize + " bytes, " + userInfo(username) + " occupies " + occupiedSpace +
             " bytes, disk quota: " + diskQuota + " bytes => QUOTA " + (quotaOK ? "OK" : "EXCEEDED"));
         //
         if (!quotaOK) {
@@ -625,7 +625,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     private Topic getUsernameTopicOrThrow(String username) {
         Topic usernameTopic = getUsernameTopic(username);
         if (usernameTopic == null) {
-            throw new RuntimeException("User \"" + username + "\" does not exist");
+            throw new RuntimeException("用户 \"" + username + "\" 不存在。");
         }
         return usernameTopic;
     }
@@ -647,7 +647,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             }
             wsService.assignToWorkspace(assoc, workspace.getId());
         } catch (Exception e) {
-            throw new RuntimeException("Assigning membership " + assoc.getId() + " to a workspace failed", e);
+            throw new RuntimeException("向工作区分配分配成员角色" + assoc.getId() + " 失败。", e);
         }
     }
 
@@ -727,7 +727,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     private AuthorizationMethod getAuthorizationMethod(String name) {
         AuthorizationMethod am = authorizationMethods.get(name);
         if (am == null) {
-            throw new RuntimeException("Authorization method \"" + name + "\" is unknown");
+            throw new RuntimeException("授权方式 \"" + name + "\" 未知。");
         }
         return am;
     }
@@ -744,11 +744,11 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         String username = cred.username;
         Topic usernameTopic = checkCredentials(cred, am);
         if (usernameTopic != null && getLoginEnabled(usernameTopic)) {
-            logger.info("##### Logging in as \"" + username + "\" => SUCCESSFUL!");
+            logger.info("##### 以身份\"" + username + "\" => 登录成功!");
             _login(username, request);
             return true;
         } else {
-            logger.info("##### Logging in as \"" + username + "\" => FAILED!");
+            logger.info("##### 以身份 \"" + username + "\" => 登录失败!");
             return false;
         }
     }
@@ -776,7 +776,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     private void _logout(HttpServletRequest request) {
         HttpSession session = request.getSession(false);    // create=false
         String username = username(session);                // save username before removing
-        logger.info("##### Logging out from " + info(session));
+        logger.info("##### 注销从 " + info(session));
         // Note: the session is not invalidated. Just the "username" attribute is removed.
         session.removeAttribute("username");
         dmx.fireEvent(POST_LOGOUT_USER, username);
@@ -797,7 +797,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
         throw new WebApplicationException(Response.status(Status.UNAUTHORIZED)
             .header("WWW-Authenticate", authScheme + " realm=" + AUTHENTICATION_REALM)
             .header("Content-Type", "text/html")    // for text/plain (default) Safari provides no Web Console
-            .entity("You're not authorized. Sorry.")
+            .entity("对不起，您未获得授权。")
             .build());
     }
 
@@ -827,7 +827,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
             // handler above) ensures EVERY type is catched (regardless of plugin activation order). For instances on
             // the other hand we don't have such a mechanism (and don't want one either).
             if (username == null) {
-                logger.fine("Setting the creator/modifier of " + info(object) + " SKIPPED -- no user is logged in");
+                logger.fine("Setting the creator/modifier of " + info(object) + " SKIPPED -- 没有用户登录。");
                 return;
             }
             //
@@ -923,7 +923,7 @@ public class AccessControlPlugin extends PluginActivator implements AccessContro
     private void checkAccess(Operation operation, long objectId) {
         if (!inRequestScope()) {
             logger.fine("### Object " + objectId + " is accessed by \"System\" -- " + operation +
-                " permission is granted");
+                " 已授权权限");
             return;
         }
         //
